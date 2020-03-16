@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body >
+
+    <div id="app">
+        <div v-bind:class="{ horror : horror }" id="wrapper">
+            <nav class="navbar">
+                <a href="" @click.prevent="reset" class="navbar-brand">Judes</a>
+            </nav>
+            <div class="content">
+                <div class="container">
+                    <p class="question" @change="changeAnswer()">{{ question }}</p>
+                    <div class="box">
+                        <a href="#" @click="changeQuestionAnswer(answer1)">{{ answer1 }}</a>
+                        <a href="#" @click="changeQuestionAnswer(answer2)">{{ answer2 }}</a>
+                    </div>
+
+                    <p class="flash" v-show="message1">Please stop this madness</p>
+                    <p class="flash" v-show="message2">Dont Click Anything</p>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+
+    <script src="assets/vue.js"></script>
+    <script src="assets/app.js"></script>
+</body>
+
+</html>
